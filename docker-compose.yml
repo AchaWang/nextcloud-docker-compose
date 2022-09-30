@@ -1,5 +1,13 @@
 version: '3'
 
+# #To use this example complete the following steps:
+
+# open docker-compose.yml
+# insert your nextcloud domain behind VIRTUAL_HOST=and LETSENCRYPT_HOST=
+#  for example : cloud.clarknasjp.tk
+# enter a valid email behind LETSENCRYPT_EMAIL=
+#  if you use mariadb or mysql choose a root password for the database behind MYSQL_ROOT_PASSWORD=
+# change nextcloud data dir , go to app>volumes
 services:
   db:
     image: mariadb:10.5
@@ -22,6 +30,7 @@ services:
     image: nextcloud:apache
     restart: always
     volumes:
+      #change to :  - {path to your nextcloud dir}:/var/www/html
       - nextcloud:/var/www/html
     environment:
       - VIRTUAL_HOST=
@@ -93,6 +102,7 @@ services:
 #    networks:
 #      - proxy-tier
 
+#no need to change below---------
 volumes:
   db:
   nextcloud:
