@@ -24,11 +24,12 @@ services:
       - db.env
 
   redis:
+    container_name: nextcloud_redis
     image: redis:alpine
     restart: always
-    container_name: nextcloud_redis
+    
   app:
-   container_name: nextcloud_app
+    container_name: nextcloud_app
     image: nextcloud:apache
     restart: always
     volumes:
