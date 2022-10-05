@@ -10,5 +10,7 @@
 #### 2. choose a password for the database user nextcloud in db.env behind MYSQL_PASSWORD= (for mariadb/mysql) or POSTGRES_PASSWORD= (for postgres)
 #### 3. run docker-compose build --pull to pull the most recent base images and build the custom dockerfiles
 #### 4. start nextcloud with docker-compose up -d
+###  5. after build : confighp 最後一行中加入'overwriteprotocol' => 'https',
 #### If you want to update your installation to a newer version of nextcloud, repeat the steps 3 and 4
 #### tips: docker exec -u 33 nt_app ./occ files:scan --all
+
