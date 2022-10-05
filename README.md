@@ -13,5 +13,4 @@
 ###  5. after build : confighp 最後一行中加入'overwriteprotocol' => 'https',
 #### If you want to update your installation to a newer version of nextcloud, repeat the steps 3 and 4
 #### tips: docker exec -u 33 nt_app ./occ files:scan --all
-###docker exec -u 33 nt_app ./occ db:convert-type --all-apps mysql nt_app 127.0.0.1 mysql_nextcloud
 
